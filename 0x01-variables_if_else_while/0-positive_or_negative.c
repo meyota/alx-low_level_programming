@@ -5,7 +5,7 @@
 /**
  * main - entry point
  * Dscription: prints random number and states wheather
- * it is positive, negative, or zero 
+ *             it is positive, negative or zero
  * Return: Always 0.
  */
 
