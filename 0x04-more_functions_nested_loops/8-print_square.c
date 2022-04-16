@@ -2,14 +2,14 @@
 
 /**
  * print_square - prints hashtags to make a square
- * @n: limit
+ * @size: limit
  * Return: void
  */
 void print_square(int size)
 {
-int i; j;
+int i, j;
 
-if (sie > 0)
+if (size > 0)
 {
 for (i = 0; i < size; i++)
 {
