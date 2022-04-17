@@ -19,7 +19,7 @@ for (mult = 1; mult <= n; mult++)
 _putchar(',');
 _putchar(' ');
 
-prod num * mult;
+prod = num * mult;
 
 if (prod <= 99)
 _putchar(' ');
