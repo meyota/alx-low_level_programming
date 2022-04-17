@@ -2,7 +2,7 @@
 
 /**
  * main - prints the sum of the even-valued terms
- *        not exceed 4,000,000
+ *        not exceed 4000000
  *
  * Return: 0
  */
@@ -13,9 +13,10 @@ float tot_sum;
 
 while (1)
 {
-fibsum = fib1 +fib 2;
+fibsum = fib1 + fib 2;
 if (fibsum > 4000000)
 break;
+
 if ((fibsum % 2) == 0)
 tot_sum += fibsum;
 
