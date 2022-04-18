@@ -6,7 +6,7 @@
  *
  * Return: void
  */
-puts_half(char *str)
+void puts_half(char *str)
 {
 int i, last;
 i = 0;
@@ -19,6 +19,6 @@ for (i = last; str[i]; i++)
 {
 _putchar (str[i]);
 }
-_putchar('\n');
+_putchar ('\n');
 }
 
