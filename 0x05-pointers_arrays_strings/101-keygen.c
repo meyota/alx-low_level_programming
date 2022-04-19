@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 /**
- * my task for password
+ *
  */
 int main(void)
 {
