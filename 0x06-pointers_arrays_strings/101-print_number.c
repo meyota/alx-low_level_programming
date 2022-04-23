@@ -25,5 +25,4 @@ z = n / divisor;
 _putchar('0' + z);
 
 }
-
 }
