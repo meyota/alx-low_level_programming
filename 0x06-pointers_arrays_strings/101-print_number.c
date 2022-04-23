@@ -8,26 +8,22 @@
 
 void print_number(int n)
 {
-int divisor = 1, y, z;
+int divisor = 1, i, resp;
 
 if (n < 0)
 {
-
 _putchar('-');
 n *= -1;
-
 }
 
-for (y = 0; n / divisor > 9; y++, divisor *= 10)
+for (i = 0; n / divisor > 9; i++, divisor *= 10)
 ;
-
 
 for (; divisor >= 1; n %= divisor, divisor /= 10)
 {
+resp = n / divisor;
+_putchar('0' + resp);
 
-z = n / divisor;
-_putchar('0' + z);
-	
 }
 
 }
