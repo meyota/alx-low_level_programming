@@ -14,7 +14,7 @@ char output[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 for (a = 0; s[a] != '\0'; a++)
 {
-for (b = 0; input[y] != '\0'; b++)
+for (b = 0; input[b] != '\0'; b++)
 {
 if (s[a] == input[b])
 {
