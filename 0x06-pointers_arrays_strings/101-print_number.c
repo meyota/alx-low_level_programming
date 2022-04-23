@@ -8,7 +8,7 @@
 
 void print_number(int n)
 {
-int divisor = 1, y, z;
+int divisor = 1, y, resp;
 
 if (n < 0)
 {
@@ -21,8 +21,8 @@ for (y = 0; n / divisor > 9; y++, divisor *= 10)
 
 for (; divisor >= 1; n %= divisor, divisor /= 10)
 {
-z = n / divisor;
-_putchar('0' + z);
+resp = n / divisor;
+_putchar('0' + resp);
 
 }
 }
