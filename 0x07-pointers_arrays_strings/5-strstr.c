@@ -12,7 +12,7 @@ char *_strstr(char *haystack, char *needle)
 int i = 0, j, k;
 
 while (*(haystack + i) != '\0')
-	{
+{
 k = i;
 j = 0;
 while (*(needle + j) == *(haystack + i) && *(haystack + i) != '\0'
