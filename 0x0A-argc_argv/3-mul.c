@@ -1,6 +1,6 @@
 #include "main.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * Main - prints the multiplication of two integers
@@ -11,6 +11,7 @@
 int main(int argc, char *argv[])
 {
 int x = 0, y = 0;
+
 if (argc == 3)
 {
 x = atoi(argv[1]);
