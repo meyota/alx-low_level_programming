@@ -3,11 +3,12 @@
 #include <stdlib.h>
 
 /**
- * Main - prints the multiplication of two integers
+ * Main - prints the multiplication of two int
  * @argc: int type
  * @argv: char type
- * Return: 0 if true 1 if false
+ * Return: 0 if true, 1 if false
  **/
+
 int main(int argc, char *argv[])
 {
 int x = 0, y = 0;
