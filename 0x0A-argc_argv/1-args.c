@@ -4,11 +4,13 @@
  * main - Main
  * @argc: int type
  * @argv: char type
- * Return: prints num of arguments
+ * Return: 0
  **/
+
 int main(int argc, char *argv[])
 {
 (void) argv;
 printf("%d\n", argc - 1);
+
 return (0);
 } 
