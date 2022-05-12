@@ -23,5 +23,4 @@ if (result == 1)
 	return (i);
 }
 return (-1);
-
 }
