@@ -28,5 +28,6 @@ for (num_char = 0; str[num_char]; num_char++)
 new->len = num_char;
 new->next = *head;
 *head = new;
+
 return (*head);
 }
