@@ -9,14 +9,13 @@
  *
  * Return: number of nodes in the list
  */
-size_t print_list(const list_t *h)
 
+size_t print_list(const list_t *h)
 {
 	size_t numb_nodes;
 	numb_nodes = 0;
 
 	while (h != NULL)
-
 	{
 		if (h->str == NULL)
 			printf("[%d] %s\n", 0, "(nil)");
@@ -26,7 +25,6 @@ size_t print_list(const list_t *h)
 		h = h->next;
 		numb_nodes++;
 	}
-
 	return (numb_nodes);
 }
 
