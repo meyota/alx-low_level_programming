@@ -14,11 +14,10 @@ ssize_t file, fread, fwrite;
 char *buffer;
 
 buffer = malloc(sizeof(char) * letters);
-if (filename == NULL || buffer == NULL)
-{
-free(buffer);
-return (0);
-}
+if (filename == NULL)
+	return (0);
+if (buffer == NULL)
+	return (0);
 
 file = open(filename, O_RDONLY);
 if (file == -1)
@@ -29,6 +28,7 @@ if (fread == -1)
 fwrite = write(STDOUT_FILENO, buffer, fread);
 if (fwrite == -1)
 	return (0);
+
 close(file);
 free(buffer);
 return(fwrite);
