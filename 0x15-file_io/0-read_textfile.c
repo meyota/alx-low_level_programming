@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * read_textfile - reads a text file and prints it to the standard output
+ * read_textfile - reads a text file and prints it to the std output
  *
  * @filename: name of the file to be read
  * @letters: number of letters to read and print
@@ -14,10 +14,11 @@ ssize_t file, fread, fwrite;
 char *buffer;
 
 buffer = malloc(sizeof(char) * letters);
-if (filename == NULL)
-	return (0);
-if (buffer == NULL)
-	return (0);
+if (filename == NULL || buffer == NULL)
+{
+free(buffer);
+return (0);
+}
 
 file = open(filename, O_RDONLY);
 if (file == -1)
