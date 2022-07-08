@@ -1,68 +1,45 @@
 #include "lists.h"
-
 /**
-  * delete_dnodeint_at_index - deletes node at index index of list.
-  * @head: double pointer to list.
-  * @index: index of node to be deleted.
-  *
-  * Return: 1 if it succeeded, -1 if it failed.
-  */
+ *delete_dnodeint_at_index - deletes a node at a certain index
+ *@head:pointer to node
+ *@index:position to delete at
+ *Return:1 - success, -1 error
+ */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *temp, *temp2, *tp;
-	unsigned int len = dlistint_len2(*head);
+	unsigned int i = 0;
+	dlistint_t *current_node = *head;
+	dlistint_t *next_node = NULL;
+	dlistint_t *node_to_delete = NULL;
 
-	if (*head == NULL || len < index)
-		return (-1);
-	temp = *head;
-	if (index == 0 && (*head)->next == NULL)
+	while (current_node != NULL)
 	{
-		free(temp), *head = NULL;
-		return (1);
-	}
-	if (index ==  0 && (*head)->next != NULL)
-	{
-		*head = (*head)->next;
-		(*head)->prev = NULL;
-	}
-	if (index > 0)
-	{
-		while (index != 0)
-			temp = temp->next, index--;
-		if (temp->next == NULL)
+		if (index == 0)
 		{
-			tp = *head;
-			while (tp->next != NULL)
-				tp = tp->next;
-			temp2 = tp->prev;
-			temp2->next = NULL, free(tp);
+			node_to_delete = current_node;
+			next_node = current_node->next;
+			if (next_node != NULL)
+				next_node->prev = NULL;
+			*head = next_node;
+			free(node_to_delete);
 			return (1);
 		}
-		temp2 = temp->prev;
-		temp2->next = temp->next;
-		temp->next->prev = temp2;
-	}
-	free(temp);
-	return (1);
-}
+		if (i == index)
+		{
+			dlistint_t *prev_node = NULL;
 
-/**
-  * dlistint_len2 - returns number of elements in a lineked dlistint_t list.
-  * @h: pointer to list.
-  *
-  * Return: number of elements in list.
-  */
-unsigned int dlistint_len2(dlistint_t *h)
-{
-	dlistint_t *temp;
-	unsigned int count;
-
-	temp = h;
-	count = 0;
-	while (temp != NULL)
-	{
-		temp = temp->next;
-		count++;
+			node_to_delete = current_node;
+			next_node = current_node->next;
+			prev_node = current_node->prev;
+			if (next_node != NULL)
+				next_node->prev = prev_node;
+			prev_node->next = next_node;
+			current_node = next_node;
+			free(node_to_delete);
+			return (1);
+		}
+		current_node = current_node->next;
+		i++;
 	}
-	return (count);
+	return (-1);
 }
