@@ -2,7 +2,7 @@
 
 /**
  * key_index - generates the key using hash_djb2
- * @key: The key to get the index of 
+ * @key: The key to get the index of
  * @size: The size of the array of hash table
  * Return: index key
  * Description: uses the djb2 algorithm.
