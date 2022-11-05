@@ -13,7 +13,7 @@ int interpolation_search(int *array, size_t size, int value)
 {
 	size_t i, j, k;
 
-	if (!array)
+	if (array == NULL) 
 		return (-1);
 
 	for (j = 0, k = size - 1; k >= j;)
